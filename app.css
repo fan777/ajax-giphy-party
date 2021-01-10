@@ -18,10 +18,9 @@ input:focus {
 }
 
 button {
-    font-family: 'Open Sans', sans-serif;
     padding: 5px 5px 5px 5px;
     border: none;
-    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
 }
 
 button#removeBtn {
