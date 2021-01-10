@@ -1,11 +1,14 @@
 console.log("Let's get this party started!");
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelector('#searchBtn').addEventListener('click', (e) => {
+    document.querySelector('#searchBtn').addEventListener('click', async (e) => {
         e.preventDefault();
         const input = document.querySelector('#search-term');
         try {
-            display(input.value);
+            const api_key = '9PGjMD4B8yHx2uSCbR0vW4F6Eqee2hmM';
+            const url = 'https://api.giphy.com/v1/gifs/search'; 
+            const response = await axios.get(url, {params: {q: input.value, limit: 20, api_key}});
+            display(response.data.data[Math.floor(Math.random() * response.data.data.length)].images.fixed_height.url);
         } catch (err) {
             alert(err.message);
         } 
@@ -26,11 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-async function display(q) {
-    const api_key = '9PGjMD4B8yHx2uSCbR0vW4F6Eqee2hmM';
-    const url = 'https://api.giphy.com/v1/gifs/search'; 
-    const response = await axios.get(url, {params: {q, limit: 20, api_key}});
+function display(url) {
     const image = document.createElement('img');
-    image.src = response.data.data[Math.floor(Math.random() * response.data.data.length)].images.fixed_height.url;
+    image.src = url;
     document.querySelector('#images').append(image);
 }
