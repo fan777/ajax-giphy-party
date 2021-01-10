@@ -4,13 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <title>Giphy Party!</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="app.css" rel="stylesheet">
 </head>
 
 <body>
     <h1>GIPHY PARTY</h1>
     <input type="text" id="search-term" name="search-term" placeholder="Enter a search term" />
-    <button id="search">Search Giphy!</button>
-    <button id="remove">Remove Images</button>
+    <button id="searchBtn">Search Giphy!</button>
+    <button id="removeBtn">Remove Images</button>
+
+<div id="images"></div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.js"></script>

@@ -1,0 +1,38 @@
+body {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    background-color: rosybrown;
+}
+
+img {
+    margin: 5px 5px 5px 5px;
+}
+
+input {
+    padding: 5px 5px 5px 5px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+input:focus {
+    background-color: pink;
+}
+
+button {
+    font-family: 'Open Sans', sans-serif;
+    padding: 5px 5px 5px 5px;
+    border: none;
+    text-decoration: none;
+}
+
+button#removeBtn {
+    background-color: darkred;
+    color: white;
+}
+
+button:hover, button#removeBtn:hover {
+    background-color: rgb(209, 209, 108);
+}
+
+#images {
+    margin: 10px 0px 0px 0px;
+}
